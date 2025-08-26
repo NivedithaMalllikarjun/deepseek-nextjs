@@ -5,12 +5,6 @@ import { useClerk, UserButton } from '@clerk/nextjs'
 import { useAppContext } from '@/context/AppContext'
 import ChatLabel from './ChatLabel'
 
-// Import UserButton client-only
-const UserButton = dynamic(() =>
-  import("@clerk/nextjs").then(m => m.UserButton),
-  { ssr: false }
-);
-
 
 const Sidebar = ({expand, setExpand}) => {
 
